@@ -1,7 +1,6 @@
 package io.github.douglasliebl.msclient.application.representation;
 
 import io.github.douglasliebl.msclient.domain.Client;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.Data;
 
 @Data
