@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ms-card" />
         <module name="discovery-server" />
+        <module name="ms-appraiser" />
         <module name="ms-client" />
         <module name="ms-gateway" />
       </profile>
@@ -17,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="discovery-server" options="-parameters" />
+      <module name="ms-appraiser" options="-parameters" />
       <module name="ms-card" options="-parameters" />
       <module name="ms-client" options="-parameters" />
       <module name="ms-gateway" options="-parameters" />
