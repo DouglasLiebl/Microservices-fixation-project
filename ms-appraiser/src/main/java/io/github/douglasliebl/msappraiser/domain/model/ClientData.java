@@ -7,4 +7,5 @@ public class ClientData {
     private Long id;
     private String firstName;
     private String lastName;
+    private Integer age;
 }
