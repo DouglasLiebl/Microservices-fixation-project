@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
+// Interface que faz a comunicação com o microservice de cartões;
 @FeignClient(value = "ms-card", path = "/cards")
 public interface CardResourceClient {
 

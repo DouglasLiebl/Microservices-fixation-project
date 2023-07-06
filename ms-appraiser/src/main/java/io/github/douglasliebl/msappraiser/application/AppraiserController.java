@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+// Rest Controller para o microservice de análise;
 @RestController
 @RequestMapping("/appraiser")
 @RequiredArgsConstructor
@@ -22,6 +23,7 @@ public class AppraiserController {
         return "ok";
     }
 
+    // Recebe o cpf do cliente e retorna a situação do mesmo, dados, cartões que já possui etc..;
     @GetMapping(value = "client-situation", params = "cpf")
     public ResponseEntity customerSituation(@RequestParam ("cpf") String cpf) {
         try {
@@ -34,6 +36,7 @@ public class AppraiserController {
         }
     }
 
+    // Envia o cpf e a renda do cliente e retorna quais cartões estão disponíveis para o mesmo;
     @PostMapping
     public ResponseEntity carryOutEvaluation(@RequestBody EvaluationData data) {
         try {

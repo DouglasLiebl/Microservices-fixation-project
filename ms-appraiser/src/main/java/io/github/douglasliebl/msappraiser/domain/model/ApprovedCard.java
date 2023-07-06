@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
+// DTO para um cartão aprovado, no campo limite retorna o limite estimado que será disponibilizado;
 @Data
 public class ApprovedCard {
     private String card;

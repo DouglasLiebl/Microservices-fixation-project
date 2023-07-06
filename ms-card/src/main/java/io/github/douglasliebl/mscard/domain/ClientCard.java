@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
+// Entidade que serve para relacionar os cartões de cada cliente;
 @Entity
 @Data
 @NoArgsConstructor

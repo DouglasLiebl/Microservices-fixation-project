@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-
+// Rest Controller de clientes, onde todos os endpoints são criados e implementados;
 @RestController
 @RequestMapping("clients")
 @RequiredArgsConstructor

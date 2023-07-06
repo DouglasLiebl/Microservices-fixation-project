@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients // Serve para habilitar a comunicação com outros microservices;
 public class MsAppraiserApplication {
 
 	public static void main(String[] args) {

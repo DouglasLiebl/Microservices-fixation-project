@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+// DTO para a situação do cliente;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

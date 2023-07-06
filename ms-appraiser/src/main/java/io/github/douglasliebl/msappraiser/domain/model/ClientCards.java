@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
+// DTO para os cartões que o cliente possui;
 @Data
 public class ClientCards {
     private String name;

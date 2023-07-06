@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
+// DTO para o cartão;
 @Data
 public class CardSaveRequest {
     private String name;

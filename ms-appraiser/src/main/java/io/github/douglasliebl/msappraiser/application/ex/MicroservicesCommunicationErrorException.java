@@ -2,6 +2,7 @@ package io.github.douglasliebl.msappraiser.application.ex;
 
 import lombok.Getter;
 
+// Tratamento de erro para falha na comunicação entre os serviços;
 public class MicroservicesCommunicationErrorException extends Exception{
 
     @Getter

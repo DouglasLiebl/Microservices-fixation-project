@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
+// Repositório padrão para o Objeto cliente;
 public interface ClientRepository extends JpaRepository<Client, Long> {
     Optional<Client> findByCpf(String cpf);
 }

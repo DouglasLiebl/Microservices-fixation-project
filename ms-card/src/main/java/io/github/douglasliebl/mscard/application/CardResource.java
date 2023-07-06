@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// Rest Controller de cartões, disponibiliza e implementa os endpoints
 @RestController
 @RequestMapping("cards")
 @RequiredArgsConstructor
@@ -25,6 +26,7 @@ public class CardResource {
         return "ok";
     }
 
+    // Adiciona um novo cartão a database;
     @PostMapping
     public ResponseEntity saveCard(@RequestBody CardSaveRequest request) {
         Card card = request.toModel();
@@ -33,12 +35,14 @@ public class CardResource {
 
     }
 
+    // Retorna todos os cartões cadastrados que possuem a renda necessária menor ou igual à fornecida;
     @GetMapping(params = "income")
     public ResponseEntity<List<Card>> getLessThanEqual(@RequestParam("income") Long income) {
         List<Card> list = cardService.getCardLowerThanOrEquals(income);
         return ResponseEntity.ok(list);
     }
 
+    // Retorna os cartões do usuário especificado;
     @GetMapping(params = "cpf")
     public ResponseEntity<List<CardsByClientRequest>> getCardsByUser(@RequestParam("cpf") String cpf) {
         List<ClientCard> clientCards = clientCardService.listCardsByCpf(cpf);

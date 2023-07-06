@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
+// DTO para Cliente-Cartão;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

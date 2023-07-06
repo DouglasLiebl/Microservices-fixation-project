@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
+// Entidade dos Cartões, diz quais os campos um cliente deve possuir além dos tipos de cada campo;
 @Entity
 @Data
 @NoArgsConstructor

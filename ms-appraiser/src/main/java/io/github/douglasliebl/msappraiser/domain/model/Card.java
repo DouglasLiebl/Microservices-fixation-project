@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
+// DTO para cartão;
 @Data
 public class Card {
     private Long id;

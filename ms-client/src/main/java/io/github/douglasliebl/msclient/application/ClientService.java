@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
+// Classe de serviço para o microservice de cliente, todos os métodos são implementados aqui;
 @Service
 @RequiredArgsConstructor // Cria o construtor para o clientRepository
 public class ClientService {
