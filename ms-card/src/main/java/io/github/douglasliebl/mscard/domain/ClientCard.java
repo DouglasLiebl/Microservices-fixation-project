@@ -18,7 +18,7 @@ public class ClientCard {
     @Column
     private String cpf;
     @ManyToOne
-    @JoinColumn(name = "id_client")
+    @JoinColumn(name = "id_card")
     private Card card;
     @Column
     private BigDecimal cardLimit;

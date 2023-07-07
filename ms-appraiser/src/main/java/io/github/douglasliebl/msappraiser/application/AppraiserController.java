@@ -1,10 +1,9 @@
 package io.github.douglasliebl.msappraiser.application;
 
+import io.github.douglasliebl.msappraiser.application.ex.CardIssuanceErrorException;
 import io.github.douglasliebl.msappraiser.application.ex.ClientDataNotFoundException;
 import io.github.douglasliebl.msappraiser.application.ex.MicroservicesCommunicationErrorException;
-import io.github.douglasliebl.msappraiser.domain.model.ClientSituation;
-import io.github.douglasliebl.msappraiser.domain.model.EvaluationData;
-import io.github.douglasliebl.msappraiser.domain.model.ReturnClientEvaluation;
+import io.github.douglasliebl.msappraiser.domain.model.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -47,6 +46,17 @@ public class AppraiserController {
             return ResponseEntity.notFound().build();
         } catch (MicroservicesCommunicationErrorException e) {
             return ResponseEntity.status(HttpStatus.resolve(e.getStatus())).body(e.getMessage());
+        }
+    }
+
+    @PostMapping("card-request")
+    public ResponseEntity cardRequest(@RequestBody CardIssueRequestData data) {
+        try {
+            CardIssuanceProtocol cardIssuanceProtocol = clientSituationService
+                    .cardIssuanceRequest(data);
+            return ResponseEntity.ok(cardIssuanceProtocol);
+        } catch (CardIssuanceErrorException e) {
+            return ResponseEntity.internalServerError().body(e.getMessage());
         }
     }
 }

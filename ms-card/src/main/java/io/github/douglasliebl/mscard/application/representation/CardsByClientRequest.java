@@ -19,7 +19,7 @@ public class CardsByClientRequest {
 
     public static CardsByClientRequest fromModel(ClientCard model) {
         return new CardsByClientRequest(
-                model.getCpf(),
+                model.getCard().getName(),
                 model.getCard().getFlag(),
                 model.getCardLimit());
     }

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Microservices-fixation-project.iml" filepath="$PROJECT_DIR$/.idea/Microservices-fixation-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms-card/ms-card.iml" filepath="$PROJECT_DIR$/ms-card/ms-card.iml" />
     </modules>
   </component>
 </project>
